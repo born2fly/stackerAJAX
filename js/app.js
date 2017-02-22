@@ -39,7 +39,8 @@ var showQuestion = function(question) {
 var showAnswer = function(answer) {
 	
 	// // clone our result template code
-	var result = $('.templates .question').clone();
+	var result = $('.templates .answerer').clone();
+	// var result = $('.templates .question').clone();
 	
 	// // Set the question properties in result
 	// var questionElem = result.find('.question-text a');
@@ -47,9 +48,11 @@ var showAnswer = function(answer) {
 	// questionElem.text(question.title);
 
 	// // set the date asked property in result
-	 var asked = result.find('.asked-date');
-	// var date = new Date(1000*question.creation_date);
-	 asked.text(answer.score);
+	 var asked = result.find('.answererName');
+	//  var asked = result.find('.asked-date');
+	//  var date = new Date(1000*question.creation_date);
+	    asked.text(answer.user.display_name);
+	//    asked.text(answer.score);
 
 	// // set the .viewed for question property in result
 	// var viewed = result.find('.viewed');
@@ -130,7 +133,6 @@ var getUnanswered = function(tags) {
 	var request = { 
 		tagged: tags,
 		site: 'stackoverflow',
-	 // period: all_time
 		order: 'desc',
 		sort: 'creation'
 	};

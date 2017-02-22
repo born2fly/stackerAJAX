@@ -24,14 +24,12 @@
 				<input id="unanswered" type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" autofocus required>
 				<input type="submit" value="Submit">
 			</form>
-
 			<h3>View the Top Answerers for a Tag</h3> 
 				<form class="inspiration-getter">
 					<label for="answerers">Tag</label>
 					<input id="answerers" type="text" placeholder="e.g., jQuery" name="answerers" size="30"  required>
 					<input type="submit" value="Submit">
 				</form>
-				
 		</div>
 		<div class="results-container">
 			<div class="search-results"></div>
@@ -49,17 +47,16 @@
 				<dd class="viewed"></dd>
 			<dt>Asker</dt>
 				<dd class="asker"></dd>
-		
-		              <!-- Top Answerers template starts here  -->
-			
-			<dt>Name:</dt>
-				<!--<dd class="asked-date"></dd>-->
-			<dt>Reputation:</dt>
-				<!--<dd class="viewed"></dd>-->
-			
-
 		</dl>
-					  
+
+	 <!-- Top Answerers template starts here  -->
+			<dl class="result answerer">
+				<dt>Name:</dt>
+				<dd class="answererName"></dd>
+			<dt>Reputation:</dt>
+				<!--<dd class="answererReputation"></dd>-->
+			</dl>	
+				  
 		<div class="error">
 			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
 		</div>
