@@ -54,6 +54,9 @@ var showAnswer = function(answer) {
 	    asked.text(answer.user.display_name);
 	//    asked.text(answer.score);
 
+	var rep = result.find('.answererReputation');
+		rep.text(answer.user.reputation);
+
 	// // set the .viewed for question property in result
 	// var viewed = result.find('.viewed');
 	// viewed.text(question.view_count);
