@@ -55,13 +55,14 @@ var showAnswer = function(answer) {
 	//    asked.text(answer.score);
 
 	var rep = result.find('.answererReputation');
+	    console.log(answer.user.reputation);
 		rep.text(answer.user.reputation);
 
 	// // set the .viewed for question property in result
 	// var viewed = result.find('.viewed');
 	// viewed.text(question.view_count);
 
-	// // set some properties related to asker
+	set some properties related to answerer
 	// var asker = result.find('.asker');
 	// asker.html('<p>Name: <a target="_blank" '+
 	// 	'href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
