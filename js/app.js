@@ -65,8 +65,8 @@ var showAnswer = function(answer) {
 	// set some properties related to answerer
 	var ansName = result.find('.answererName');
 	 ansName.html('<p>Name: <a target="_blank" '+
-		'href=http://stackoverflow.com/users/' + answerer.user.user_id + ' >' +
-	 	answerer.user.display_name +
+		'href=http://stackoverflow.com/users/' + answer.user.user_id + ' >' +
+	 	answer.user.display_name +
 	//    'href=http://stackoverflow.com/users/' + answerer.user.user_id + ' >' +
 	//  	// question.user.display_name +
 	  	'</a></p>' 
