@@ -38,16 +38,16 @@ var showQuestion = function(question) {
 // and returns new result to be appended to DOM
 var showAnswer = function(answer) {
 	
-	// // clone our result template code
+	// clone our result template code
 	var result = $('.templates .answerer').clone();
 	// var result = $('.templates .question').clone();
 	
-	// // Set the question properties in result
+	// Set the question properties in result
 	// var questionElem = result.find('.question-text a');
 	// questionElem.attr('href', question.link);
 	// questionElem.text(question.title);
 
-	// // set the date asked property in result
+	// set the date asked property in result
 	 var asked = result.find('.answererName');
 	//  var asked = result.find('.asked-date');
 	//  var date = new Date(1000*question.creation_date);
@@ -58,20 +58,21 @@ var showAnswer = function(answer) {
 	    console.log(answer.user.reputation);
 		rep.text(answer.user.reputation);
 
-	// // set the .viewed for question property in result
+	// set the .viewed for question property in result
 	// var viewed = result.find('.viewed');
 	// viewed.text(question.view_count);
 
-	set some properties related to answerer
-	// var asker = result.find('.asker');
-	// asker.html('<p>Name: <a target="_blank" '+
-	// 	'href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
-	// 	question.owner.display_name +
-	// 	// 'href=http://stackoverflow.com/users/' + question.user.user_id + ' >' +
-	// 	// question.user.display_name +
-	// 	'</a></p>' +
-	// 	'<p>Reputation: ' + question.owner.reputation + '</p>'
-	// );
+	// set some properties related to answerer
+	var ansName = result.find('.answererName');
+	 ansName.html('<p>Name: <a target="_blank" '+
+		'href=http://stackoverflow.com/users/' + answerer.user.user_id + ' >' +
+	 	answerer.user.display_name +
+	//    'href=http://stackoverflow.com/users/' + answerer.user.user_id + ' >' +
+	//  	// question.user.display_name +
+	  	'</a></p>' 
+	// 	'<p>Reputation: ' + answerer.user.reputation + '</p>'
+	
+	);
 
 	return result;
 };
